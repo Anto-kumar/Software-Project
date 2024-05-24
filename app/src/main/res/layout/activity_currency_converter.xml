@@ -11,23 +11,23 @@
         android:id="@+id/takatorupi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="103dp"
-        android:layout_marginEnd="160dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="56dp"
+        android:text="Taka to Rupee"
+        app:layout_constraintEnd_toStartOf="@+id/rupitotaka"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/takeinput" />
 
     <Button
         android:id="@+id/takatodollar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="160dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="59dp"
+        android:text="Taka to Dollar"
+        app:layout_constraintEnd_toStartOf="@+id/dollartotaka"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/takatorupi" />
 
@@ -36,11 +36,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="117dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="84dp"
         android:ems="10"
+        android:hint="Input Amount"
         android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/rupitotaka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:text="Rupee to Taka"
+        app:layout_constraintStart_toEndOf="@+id/takatorupi"
+        app:layout_constraintTop_toBottomOf="@+id/takeinput" />
+
+    <Button
+        android:id="@+id/dollartotaka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="83dp"
+        android:text="Dollar to Taka"
+        app:layout_constraintStart_toEndOf="@+id/takatodollar"
+        app:layout_constraintTop_toBottomOf="@+id/rupitotaka" />
 </androidx.constraintlayout.widget.ConstraintLayout>
