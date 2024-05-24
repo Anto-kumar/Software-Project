@@ -13,6 +13,9 @@
         android:theme="@style/Theme.UnitConverterAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".LengthConverterShow"
+            android:exported="false" />
+        <activity
             android:name=".AreaConverter"
             android:exported="false" />
         <activity
