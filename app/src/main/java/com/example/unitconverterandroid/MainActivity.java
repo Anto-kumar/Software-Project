@@ -14,6 +14,11 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     Button currencyButton;
+    Button lengthButton;
+    Button weightButton;
+    Button temperatureButton;
+    Button areaButton;
+    Button bmiButton;
 
 
     @Override
@@ -35,6 +40,56 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CurrencyConverter.class);
+                startActivity(intent);
+            }
+        });
+
+        lengthButton = findViewById(R.id.length);
+
+        lengthButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LengthConverter.class);
+                startActivity(intent);
+            }
+        });
+
+        weightButton = findViewById(R.id.weight);
+
+        weightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WeightConverter.class);
+                startActivity(intent);
+            }
+        });
+
+        temperatureButton = findViewById(R.id.temperature);
+
+        temperatureButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TemperatureConverter.class);
+                startActivity(intent);
+            }
+        });
+
+        areaButton = findViewById(R.id.area);
+
+        areaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AreaConverter.class);
+                startActivity(intent);
+            }
+        });
+
+        bmiButton = findViewById(R.id.bmi);
+
+        bmiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BMIConverter.class);
                 startActivity(intent);
             }
         });
