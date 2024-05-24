@@ -8,6 +8,13 @@ public class CurrencyConverterFactory {
         } else if (type.equalsIgnoreCase("takatorupee")) {
             return takatorupee.getInstance(value);
         }
+         else if (type.equalsIgnoreCase("dollartotaka")) {
+            return dollartotaka.getInstance(value);
+        }
+         else if (type.equalsIgnoreCase("rupitotaka")) {
+                return rupeetotaka.getInstance(value);
+            }
+
         throw new IllegalArgumentException("Unknown currency conversion type: " + type);
     }
 }
