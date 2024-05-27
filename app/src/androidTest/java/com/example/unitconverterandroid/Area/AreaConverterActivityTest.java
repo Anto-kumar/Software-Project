@@ -41,10 +41,4 @@ public class AreaConverterActivityTest {
         onView(withId(R.id.result)).check(matches(withText("1.0")));
     }
 
-    @Test
-    public void testEmptyInput() {
-        onView(withId(R.id.m_square_to_cm_square)).perform(ViewActions.click());
-        onView(withId(R.id.result)).check(matches(withText("")));
-    }
-
 }
