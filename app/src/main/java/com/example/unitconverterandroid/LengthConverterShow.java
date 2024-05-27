@@ -11,10 +11,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.unitconverterandroid.Currency.CurrencyConverter;
-import com.example.unitconverterandroid.Currency.CurrencyConverterFactory;
+import com.example.unitconverterandroid.Length.LengthConverterFactory;
+import com.example.unitconverterandroid.Length.LengthConverter;
 
-public class CurrencyConverterShow extends AppCompatActivity {
+
+
+public class LengthConverterShow extends AppCompatActivity {
 
     TextView tv;
 
@@ -22,7 +24,7 @@ public class CurrencyConverterShow extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_currency_converter_show);
+        setContentView(R.layout.activity_length_converter_show);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -32,26 +34,16 @@ public class CurrencyConverterShow extends AppCompatActivity {
         tv=findViewById(R.id.tv);
 
         Intent intent = getIntent();
-        String currencyType = intent.getStringExtra("currency");
-        String inputValueString = intent.getStringExtra("input");
-        Double inputValue = Double.parseDouble(inputValueString);
+        String length = intent.getStringExtra("length");
+        String input = intent.getStringExtra("input");
 
-        CurrencyConverter result = CurrencyConverterFactory.getConverter(currencyType, inputValue);
+        double inputValue = Double.parseDouble(input);
 
+        LengthConverter result = LengthConverterFactory.getConverter(length, inputValue);
         double x = result.convert();
         Toast.makeText(this, String.valueOf(x), Toast.LENGTH_SHORT).show();
         tv.setText(String.valueOf(x));
 
 
-
-
-
-
     }
 }
-
-
-//new line added
-//ami miraz
-//ami anto
-//ami abr anto

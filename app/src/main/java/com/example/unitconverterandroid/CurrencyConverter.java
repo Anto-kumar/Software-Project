@@ -14,7 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class CurrencyConverter extends AppCompatActivity {
 
-    Button a,b;
+    Button takatorupi, takatodollar;
+    Button rupitotaka, dollartotaka;
     EditText input;
 
     @Override
@@ -29,13 +30,15 @@ public class CurrencyConverter extends AppCompatActivity {
         });
 
 
-        a = findViewById(R.id.takatorupi);
-        b = findViewById(R.id.takatodollar);
+        takatorupi = findViewById(R.id.takatorupi);
+        takatodollar = findViewById(R.id.takatodollar);
+        rupitotaka = findViewById(R.id.rupitotaka);
+        dollartotaka = findViewById(R.id.dollartotaka);
         input = findViewById(R.id.takeinput);
 
 
 
-        a.setOnClickListener(v -> {
+        takatodollar.setOnClickListener(v -> {
             if(input.getText().toString().isEmpty())
             {
                 Toast.makeText(this, "Fill input value", Toast.LENGTH_SHORT).show();
@@ -51,7 +54,7 @@ public class CurrencyConverter extends AppCompatActivity {
 
         });
 
-        b.setOnClickListener(v -> {
+        takatorupi.setOnClickListener(v -> {
             if(input.getText().toString().isEmpty())
             {
                 Toast.makeText(this, "Fill input value", Toast.LENGTH_SHORT).show();
@@ -60,6 +63,36 @@ public class CurrencyConverter extends AppCompatActivity {
                 // Convert Takas to Dollars
                 Intent intent = new Intent(CurrencyConverter.this, CurrencyConverterShow.class);
                 intent.putExtra("currency", "takatorupee");
+                intent.putExtra("input", input.getText().toString());
+                startActivity(intent);
+
+            }
+        });
+
+        rupitotaka.setOnClickListener(v -> {
+            if(input.getText().toString().isEmpty())
+            {
+                Toast.makeText(this, "Fill input value", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                // Convert Takas to Dollars
+                Intent intent = new Intent(CurrencyConverter.this, CurrencyConverterShow.class);
+                intent.putExtra("currency", "rupitotaka");
+                intent.putExtra("input", input.getText().toString());
+                startActivity(intent);
+
+            }
+        });
+
+        dollartotaka.setOnClickListener(v -> {
+            if(input.getText().toString().isEmpty())
+            {
+                Toast.makeText(this, "Fill input value", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                // Convert Takas to Dollars
+                Intent intent = new Intent(CurrencyConverter.this, CurrencyConverterShow.class);
+                intent.putExtra("currency", "dollartotaka");
                 intent.putExtra("input", input.getText().toString());
                 startActivity(intent);
 
