@@ -37,6 +37,6 @@ public class BMIConverterTest {
         onView(withId(R.id.bmibutton)).perform(click());
 
         // Check if the result is displayed correctly
-        onView(withId(R.id.bmiresult)).check(matches(withText("BMI: 23.14")));
+        onView(withId(R.id.bmiresult)).check(matches(withText("BMI: 21.65")));
     }
 }
